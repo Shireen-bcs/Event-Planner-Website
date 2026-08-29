@@ -1,0 +1,1159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root
+{
+    --clr1:#aaa;
+    --clr2: #07326a;
+}
+
+*
+{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: none;
+}
+
+html
+{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar
+{
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track
+{
+    background: #07326a;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--clr1);
+}
+
+section
+{
+    min-height: auto;
+    padding: 8rem 10%;
+    background: #f4f7f6;
+}
+
+.btn
+{
+    position: relative;
+    z-index: 10;
+    display: inline-block;
+    margin: 15px;
+    padding: 1rem 2.5rem;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #ffffff;
+    background: #d4af37 ;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(7, 50, 106, 0.2);
+    border-radius: 5px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn:hover
+{
+    background:#07326a;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+.btn:active
+{
+    transform: scale(0.9);
+}
+span,.fa-heart
+{
+    color: #07326a;
+}
+
+.heading 
+{
+    text-align: center;
+    padding-top: 2rem;
+    font-size: 3rem;
+    color:#000;
+}
+
+.head
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: #07326a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 3%;
+}
+
+.head .logo
+{
+    font-weight: bold;
+    color: #f1f7f9;
+    font-size: 2.3rem;
+}
+
+.logo
+{
+    padding-left: 5%;
+}
+
+.head .navbar a
+{
+    font-size: 1.7rem;
+    color: #f1f7f9; 
+    margin-right: 2rem;
+}
+.header-active{
+    background: #fff;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+.head .navbar a:hover
+{
+    color:#d4af37;
+}
+
+#menu
+{
+    font-size: 2.5rem;
+    color: #f1f7f9;
+    cursor: pointer;
+    display: none;
+    transition: .2s linear;
+}
+
+/*---------Home Section---------*/
+.home {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #000; /* Grey ki jagah black rakhein fallback ke liye */
+}
+
+.back-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0; /* Isse video base layer par rahegi */
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.home .content {
+    position: relative;
+    z-index: 1; /* Content video ke upar dikhega */
+    color: white;
+}
+.home .content
+{
+    text-align: center;
+    padding-top: 10rem;
+    margin: 3rem auto;
+    max-width: 80rem;
+}
+
+.home .content p
+{
+   font-size: 2rem;
+   color: #f1f7f9;
+   text-transform: uppercase;
+   letter-spacing: .5rem;
+}
+
+.home .content h3
+{
+    color: #fff;
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+    
+}
+/*----------vedor--------------*/
+.vendor .title h1 {
+    margin-bottom: 0.5rem;
+    padding-bottom: 0;
+}
+.vendor
+{
+    background: #f4f7f6;
+}
+.vendor-row
+{
+    background: #fff;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    border: 1px solid #eee;
+}
+.vendor-list
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.vendor .vendor-row
+{
+    max-width: 1300px;
+    background: #ffffff;
+    height: auto;
+    padding-bottom: 2rem;
+    flex: 1 1 30rem;
+    margin: 15px;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.vendor-row:hover
+{
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0, 0, 0.12);
+   
+}
+
+.vendor-row .rate
+{
+    width: 6rem;
+    padding: .5rem .1rem;
+    color: black;
+    background: #f1f7f9;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+.vendor .vendor-row .vendorimg {
+    height: 25rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.vendor-row h2{
+    font-size: 2rem;
+    font-weight: 600;
+}
+.vendor-row p{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: black;
+}
+.vendor-row h3 
+{
+    font-size: 2rem;
+    color: #000;
+    background: #f1f7f9;
+
+}
+
+h1{
+    text-align: center; 
+    font-size: 3rem;
+    
+    color: #07326a;
+}
+.bor {
+    display: block; 
+    margin: 0 auto; 
+    width: 30rem;
+}
+.about-heading
+{
+    font-size: 3.5rem;
+    color: #07326a;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: left;
+}
+.about-text
+{
+    line-height: 1.8;
+    padding-top: .5rem;
+    color: #333;
+    text-align: left;
+    margin: 0 auto;
+    font-size: 1.6rem;
+}
+
+/*-------marriage reception-----*/
+.mrsection
+{
+   padding-top: 15rem;
+    background: linear-gradient(rgba(0,0,0,0.2)),url(New/marriage-reception.jpg);
+    background-position: center;
+    background-position: center;
+    background-size: cover;
+    height: 50vh;
+}
+
+.mrsection .mrcontent
+{
+    text-align: center;
+    padding-top: 1rem;
+    margin: 3rem auto;
+    max-width: 80rem;
+}
+/*-------About Us---------------*/
+.about .container
+{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-top: 2rem;
+}
+
+.about .container .im
+{
+    flex: 1 1 40rem;
+    padding: 0rem;
+}
+
+.about .container .im img   
+{
+    width: 90%;
+    padding-top: 10%;
+    
+}
+
+.about .container .content
+{
+    flex: 1 1 40rem;
+    padding: 1rem;
+}
+
+.about .container .content h3
+{
+    font-size: 3.5rem;
+    color:  #000;
+}
+.about .container .content h3 p
+{
+    text-transform: capitalize;
+    justify-content: baseline;
+    line-height: 3rem;
+    font-size: 3rem;
+    color: #333;
+}
+
+#subheading
+{
+    color: #07326a;
+    padding-bottom: 5%;
+    font-size: 3rem;
+}
+.absection
+{
+   padding-top: 15rem;
+    background: linear-gradient(rgba(0,0,0,0.3)),url(images/buisness.jpg);
+    background-position: center;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.absection .abcontent
+{
+    text-align: center;
+    padding-top: 10rem;
+    margin: 3rem auto;
+    max-width: 80rem;
+}
+
+.absection .abcontent h3 
+{
+  font-size: 3rem;
+   color: #f1f7f9;
+   text-transform: uppercase;
+   letter-spacing: .5rem;   
+}
+
+.absection .abcontent h1 
+{
+    color: #fff;
+    font-size: 6rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.para 
+{
+    color: #fff;
+    font-size: 2rem;
+    text-transform: uppercase; 
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+}
+
+/*------------team-----------------*/
+.team {
+    min-height: auto;
+    padding-bottom: 5rem;
+}
+.teamimg
+{
+    width: 15rem;
+    height: 15rem;
+}
+
+.team .box-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.team .box-container .box{
+    margin: 1rem;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,0.1);
+    background: #fff url(images/simple.jpg) no-repeat;
+    padding: 3rem 2rem;
+    text-align: center;
+    background-size: cover;
+    flex: 1 1 30rem;
+    max-width: 35rem;
+}
+
+.team .box-container .box img{
+    border-radius: 50%;
+    object-fit: cover;
+    height: 15rem;
+    width: 15rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 0.5rem solid #f1f7f9;
+}
+
+.team .box-container .box h3{
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.team .box-container .box span{
+    font-size: 1.8rem;
+    color: var(--clr2);
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.team .box-container .box p{
+    font-size: 1.5rem;
+    color: #333;
+    padding: 1rem 0;
+}
+
+.team .box-container .box .share 
+{
+   padding-top: 1.5rem;
+   display: flex;
+   justify-content: center;
+   gap: 1rem;
+}
+
+.team .box-container .box .share a
+{
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    font-size: 2rem;
+    color: #333;
+    background: #eee;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.team .box-container .box .share a:hover
+{
+    color: #fff;
+    background: var(--clr2);
+}
+/*-----------service section-----------*/
+/*--third--*/
+.services .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+    gap: 2rem;
+}
+
+.services .box-container .box
+{
+    text-align: center;
+    padding: 4rem;
+    background: #fff;
+    box-shadow: #000;
+    border-radius: 5rem;
+}
+.services .box-container .box 
+{
+    height: 33rem;
+    margin: 1rem;
+}
+
+.services .box-container .box:hover img
+{
+    transform: scale(-1) rotate(180deg);
+}
+
+.services .box-container .box h3{
+    font-size: 2rem;
+    padding: 1rem 0;
+    color: #333;
+    
+}
+.services .box-container .box p
+{
+    font-size: 1.5rem;
+    color: #333;
+    line-height: 2;
+}
+img{
+width: 9rem;
+}
+
+.box-container{
+    padding-top: 2rem;
+}
+/*end*/
+.sersection
+{
+   padding-top: 15rem;
+    background: linear-gradient(rgba(0,0,0,0.2)),url(images/wedding.jpg);
+    background-position: center;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.sersection .sercontent
+{
+    text-align: center;
+    padding-top: 10rem;
+    margin: 3rem auto;
+    max-width: 80rem;
+}
+
+.service-slider .swiper-slide
+{
+    overflow: hidden;
+    background: #aaa;
+    border-radius: .4rem;
+    align-items: center;
+    height: 50rem;
+    width: 35rem;
+    position: relative;
+
+}
+.service-slider .swiper-slide img
+{
+    height: 100%;
+    width: 100%; 
+    object-fit: cover;
+    display: block;
+}
+
+.service-slider .swiper-slide h3
+{
+    background: var(--clr2);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #f1f7f9;
+    text-align: center;
+    font-size: 2rem;
+    padding: 1rem 0;
+    margin: 0;
+    z-index: 10;
+}
+
+
+
+
+/*-----------gallery content-------------*/
+/*hero*/
+.gallerysection
+{
+   padding-top: 15rem;
+    background: linear-gradient(rgba(0,0,0,0.1)),url(images/back2.jpg);
+    background-position: center;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.gallerysection .gallerycontent
+{
+    text-align: center;
+    padding-top: 10rem;
+    margin: 3rem auto;
+    max-width: 80rem;
+}
+/*end*/
+/*second*/
+.gallery-container {
+    padding-top: 2rem;
+    padding-left: 0;
+    padding-right: 0;
+   
+}
+
+.grid
+{
+   display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.item img:hover
+{
+    transform: scale(1.05);
+}
+
+.galleryimg
+{
+    width: 30rem;
+    height: 25rem;
+
+}
+/*end*/
+
+.gallery .inner-box
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+    gap: 1.5rem;
+}
+
+.gallery-box
+{
+    height: 40rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+}
+
+.gallery-box img
+{
+   width: 100%;
+   height: 40rem;
+   background-position: center;
+   background-size: cover;
+   border-radius: 5px;
+   transition: transform 0.5s;
+}
+
+.gallery-content
+{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(transparent,aliceblue 60%);
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 20px;
+    text-align: center;
+    transition: height 0.5s;
+}
+
+.gallery-content h3
+{
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: var(--clr2);
+    margin-bottom: 5px;
+    margin-top: 70%;
+    font-weight: 700;
+}
+
+.gallery-content h3:hover
+{
+    letter-spacing: 2px;
+    transition: .5s ease-in-out;
+}
+
+.gallery-content p
+{
+    font-size: 1rem;
+    text-transform: capitalize;
+    padding: .5rem 0;
+    line-height: 1.5rem;
+}
+
+.gallery-box:hover .gallery-content
+{
+    height: 100%;
+}
+
+.gallery-box:hover img
+{
+   transform: scale(1.2);
+}
+
+/*---------------review section-----------------*/
+
+.reviewsection
+{
+   padding-top: 18rem;
+    background: linear-gradient(rgba(0,0,0,0.2)),url(New/review.jpg);
+    background-position: center;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.reviewysection .reviewcontent
+{
+    text-align: center;
+    padding-top: 10rem;
+    margin: 3rem auto;
+    max-width: 80rem;
+}
+.review .review-sec
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+    gap: 1.5rem;
+}
+
+.review .review-box
+{
+    border-radius: .2rem;
+    padding: 2rem;
+    background: var(--clr1);
+    position: relative;
+}
+
+.review .review-box .fa-quote-right
+{
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 5rem;
+    color: #fff;
+}
+
+.review .review-box .user 
+{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.review .review-box .user img
+{
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: .3rem solid #fff;
+}
+
+.review .review-box .user h3
+{
+    font-size: 2rem;
+    color: #fff;
+}
+
+.review .review-box p
+{
+    font-size: 1.5rem;
+    color: #eee;
+    padding: .5rem 0;
+    line-height: 2;
+}
+
+.rate 
+{
+    font-size: 2rem;
+    display: flex;
+}
+
+.fa-star, .fa-star-half
+{
+    color: gold;
+    font-size: 2.8rem;
+}
+
+.rate p
+{
+    font-size: 1.8rem;
+    padding-left: 10rem;
+    color: #fff;
+}
+
+
+/*------------price container------------*/
+.pricesection
+{
+   padding-top: 15rem;
+    background: linear-gradient(rgba(0,0,0,0.0)),url(images/price2.jpg);
+    background-position: center;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+.pricesection .pricecontent
+{
+    text-align: left;
+    padding-top: 10rem;
+    margin: 3rem auto;
+    max-width: 80rem;
+}
+
+.pricesection .pricecontent h3 
+{
+  font-size: 3rem;
+   color: #f1f7f9;
+   text-transform: uppercase;
+   letter-spacing: .5rem;   
+}
+
+.pricesection .pricecontent
+{
+    color: #fff;
+    font-size: 6rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.para 
+{
+    color: #fff;
+    font-size: 2rem;
+    text-transform: uppercase; 
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+}
+
+.price .price-container
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+    gap: 1.5rem;
+}
+
+.price .price-container .price-box
+{
+    padding: 2rem 0;
+    background: #eee;
+    border-radius: .5rem;
+    text-align: center;
+}
+
+.price .price-container .price-box .package
+{
+    background: var(--clr2);
+    color: #f1f7f9;
+    padding: 1.5rem 0;
+    font-size: 2rem;
+}
+
+.price .price-container .price-box .amount
+{
+    padding-top: 2rem;
+    font-size: 4rem;
+}
+
+.price .price-container .price-box
+{
+    padding-right: .5rem;
+    color: #07326a;
+}
+
+.price .price-container .price-box p
+{
+   font-size: 1.5rem;
+   color: #000;
+   padding: .5rem 0;
+}
+/*----contact --------*/
+
+.contactsection
+{
+   padding-top: 15rem;
+    background:  linear-gradient(rgba(0,0,0,0.3)),url(images/contact.jpg);
+    background-position: center;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.contactsection .contactcontent
+{
+    text-align: center;
+    padding-top: 10rem;
+    margin: 3rem auto;
+    max-width: 80rem;
+}
+
+.contact
+{
+    padding-top: 3rem;
+}
+
+.contact-inner
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+}
+.contact-inner-col 
+{
+    
+    flex: 1 1 45rem;
+    padding: 2rem;
+}
+#formdetails {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+.contact-inner-col h1
+{
+    padding: 1rem;
+    color: #000;
+    font-size: 3rem;
+    letter-spacing: capitalize;
+    text-transform: capitalize;
+}
+.contact-inner-col p{
+    padding: .5rem 0;
+    line-height: 1.5rem;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    color: #000;
+}
+.contact-inner-col input,
+.contact-inner-col textarea
+{
+    width: 100%;
+    max-width: 500px;  
+    padding: 1.2rem;
+    margin-bottom: 1.5rem;
+    border: .2rem solid #07326a;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    outline: none;
+    
+}
+.contact-inner-col textarea
+{
+    resize: none;
+
+}
+.cont-container
+{
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+    gap: 1.5rem;
+    background: #f1f7f9;
+}
+.f-container h2{
+    font-size: 2.5rem;
+    color: #07326a;
+    padding: 1rem 0;
+}
+.f-container a
+{
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: #07326a;
+    padding: .5rem;
+    display: block;
+    width: 20rem;
+    margin-top: 1rem;
+}
+.f-container i
+{
+    padding-right: .5rem;
+    color: #07326a;
+}
+.f-container p
+{
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #aaa;
+}
+.f-container input
+{
+    width: 90%;
+    padding: 1rem;
+    background: #eee;
+    border: none;
+}
+.f-container .social i
+{
+    margin-top: 1rem;
+    font-size: 2rem;
+    background: #07326a;
+    color: #fff;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+.f-container .social i:hover
+{
+   transform: translateY(-1rem);
+   transition: 1s ease;
+}
+.copyright
+{
+    padding: 2rem 0;
+    text-align: center;
+    background: #07326a;
+    font-size: 1.5rem;
+}
+.copyright p{
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+.fa-circle-arrow-up
+{
+    font-size: 3rem;
+    color: #ffffff;
+}
+
+/*----------feedback------------------*/
+.feedbacksection
+{
+   padding-top: 20rem;
+    background:url(New/feedback.jpg);
+    background-position: center;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.feedbacksection .feedbackcontent
+{
+    text-align: center;
+    padding-top: 10rem;
+    margin: 3rem auto;
+    max-width: 80rem;
+}
+
+.star-rating {
+  display: flex;
+  flex-direction: row-reverse; /* Flips the order for logic */
+  justify-content: flex-end;
+}
+
+.star-rating input {
+  display: none; /* Hide the actual radio buttons */
+}
+
+.star-rating label {
+  font-size: 2rem;
+  color: #ccc; /* Default gray star */
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+/* Hover and Checked states */
+.star-rating label:hover,
+.star-rating label:hover ~ label,
+.star-rating input:checked ~ label {
+  color: #f5b301; /* Gold color */
+}
+
+/*--------media query-------------------*/
+@media(max-width:991px)
+{
+    html
+    {
+        font-size: 55%;
+    }
+}
+
+@media(max-width:450px)
+{
+    html
+    {
+        font-size: 50%;
+    }
+}
+
+@media(max-width:768px)
+{
+    #menu
+    {
+        display: initial;
+    }                                         
+    .head .navbar
+    {
+        position: absolute;
+        top: 100%;
+        left: 0%;
+        right: 0%;
+        display: flex;
+        flex-direction: column;
+        border-bottom: .1rem solid aliceblue;
+        background: #333;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: 0.3s ease;
+    }
+
+    .head .navbar.active
+    {
+       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .head .navbar a
+    {
+        display: block;
+        background: #222;
+        border-radius: .5rem;
+        padding: 1.2rem;
+        margin: 1.2rem;
+        font-size: 1rem;
+    }
+    .about
+    {
+        text-align: center;
+    }
+}
